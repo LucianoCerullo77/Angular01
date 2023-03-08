@@ -8,8 +8,13 @@ import { Component } from '@angular/core';
 export class PersonsComponent {
   unAllow = false;
   message = 'No Person Added';
+  title= ""
 
   addPerson() {
     this.message = 'Person added';
+  }
+
+  modifyTitle(event: Event) {
+    this.title = (<HTMLInputElement>event.target).value
   }
 }
