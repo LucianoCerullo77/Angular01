@@ -12,4 +12,7 @@ import { Component } from '@angular/core';
   //   `,
   // ],
 })
-export class PersonsComponent {}
+export class PersonsComponent {
+  unAllow = false
+  allow = true
+}
