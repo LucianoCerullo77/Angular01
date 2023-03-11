@@ -9,8 +9,10 @@ export class PersonsComponent {
   unAllow = false;
   message = 'No Person Added';
   title= ""
+  showMessage = false
 
   addPerson() {
+    this.showMessage = true
     this.message = 'Person added';
   }
 

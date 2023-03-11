@@ -9,7 +9,7 @@
       >
         Add Person llow
       </button>
-      <p>{{ message }}</p>
+      <p *ngIf="showMessage">{{ message }} with the title of {{title}}</p>
       <app-person></app-person>
 
       <label>Title Person </label>
