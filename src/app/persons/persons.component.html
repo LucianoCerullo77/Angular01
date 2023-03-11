@@ -7,14 +7,19 @@
         [disabled]="unAllow"
         (click)="addPerson()"
       >
-        Add Person llow
+        Add Person allow
       </button>
-      <p *ngIf="showMessage">{{ message }} with the title of {{title}}</p>
+      <p *ngIf="showMessage; else notPerson">
+        {{ message }} with the title of {{ title }}
+      </p>
+      <ng-template #notPerson>
+        <p>Not person detected</p>
+      </ng-template>
       <app-person></app-person>
 
       <label>Title Person </label>
-      <input type="text" class="form-control" [(ngModel)]="title">
-      {{title}}
+      <input type="text" class="form-control" [(ngModel)]="title" />
+      {{ title }}
     </div>
   </div>
 </div>
